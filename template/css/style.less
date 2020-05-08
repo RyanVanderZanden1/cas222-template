@@ -1,0 +1,141 @@
+/* VARIABLES */
+
+/* colors */
+@bgColor: #ffffff;
+@footerColor: #000000;
+
+/* sizes */
+@mFontSize: 1.5em;
+@h1FontSize: 1.3em;
+@h2FontSize: 2em;
+
+/* margins */
+@pMargin: .3em;
+
+/* MIXINS */
+.commonProperties(@bgColor, @font_size, @body_margin) {
+    background-color: @bg_color;
+    font-size: @font_size;
+}
+
+.size(@font_size) {
+    font-size: @font_size;
+}
+
+.color(@color) {
+    color: @color;
+}
+
+@import "mixins.less";
+
+body {
+    margin: 0;
+}
+
+main {
+    font-family: 'Open sans', sans-serif;
+    background-color: #ffffff;
+}
+
+p, h2, h3 {
+    margin-bottom: @pMargin;
+}
+
+header {
+    background-color: #FFFFFF;
+}
+
+h1 {
+    padding: .5em;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-image: url(../red.png);
+    background-size: 1220px;
+    text-align: center;
+    font-size: @h1FontSize;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif; 
+    font-size: @h2FontSize;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: .3em;
+}
+
+p {
+    font-family: 'Open sans', sans-serif;
+    padding: 1em;
+}
+
+ul {
+    text-align: center;
+    line-height: 30px;
+}
+
+a {
+    color: @bgColor;
+}
+
+a:visited {
+  color: @bgColor;
+}
+
+a:active {
+  color: @bgColor;
+}
+
+img, object, iframe, embed {
+    max-width: 100%;
+}
+
+footer p {
+    font-family: 'Open sans', sans-serif;
+    background-color: @footerColor;
+    text-align: center;
+    padding: .05em;
+    color: #FFFFFF;
+}
+
+footer {
+    background-color: @footerColor;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+/* Mobile CSS code */
+
+@media only screen and (min-width: 481px) {
+    body {
+        font-size: @mFontSize;
+    } 
+
+}
+
+/* Desktop CSS code and higher resolution */
+
+@media only screen and (min-width: 1025px) {
+    
+    h1 {
+        margin-left: 300px;
+        margin-right: 300px;
+        border: 1px solid #000000;
+    }
+    
+    .content-wrapper {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    #container {
+        margin-left: 300px;
+        margin-right: 300px;
+        box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+    }
+}
